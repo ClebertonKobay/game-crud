@@ -19,7 +19,7 @@ Route::prefix('games')->group(function(){
     Route::post('/',[GamesController::class,'store'])->name('games_store');
     Route::get('/{id}/edit',[GamesController::class,'edit'])->where('id','[0-9]+')->name('games_edit');
     Route::put('/{id}',[Gamescontroller::class,'update'])->where('id','[0-9]+')->name('games_update');
-    Route::delete('/{id}',[Gamescontroller::class,'destroy'])->where('id','[0-9]+')->name('games_update');
+    Route::delete('/{id}',[Gamescontroller::class,'destroy'])->where('id','[0-9]+')->name('games_delete');
 });
 
 

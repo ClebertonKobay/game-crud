@@ -33,7 +33,14 @@
                 <td scope="row">{{$jogo->category}}</td>
                 <td scope="row">{{$jogo->creation_year}}</td>
                 <td scope="row">{{$jogo->value}}</td>
-                <td scope="row"><a href="{{route('games_edit',['id'=>$jogo->id])}}" class="btn btn-info"><ion-icon name="create-outline"></ion-icon> Editar</a><a href="#" class="btn btn-danger"><ion-icon name="trash-outline"></ion-icon> Deletar</a></td>
+                <td class="d-flex" scope="row">
+                  <a href="{{route('games_edit',['id'=>$jogo->id])}}" class="btn btn-info"><ion-icon name="create-outline"></ion-icon> Editar</a>
+                  <form action="{{route('games_delete',['id'=>$jogo->id])}}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button class="btn btn-danger" type="submit"><ion-icon name="trash-outline"></ion-icon> Deletar</button>
+                  </form>
+                </td>
               </tr>
               @endforeach
             </tbody>
