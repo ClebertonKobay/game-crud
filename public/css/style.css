@@ -5,15 +5,30 @@
     background-color: #191a1b;
    
 }
-h1.heading-list{
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .btn{
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+} 
+
+.heading-list{
     color: white;
     background-color: #191a1b;
     margin: 0;
     
     padding: 20px;
 }
-.container{
-   
+.btn{
+   display: inline-block;
+   margin: 5px;
 }
 
 .table{

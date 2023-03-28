@@ -3,7 +3,10 @@
 
 @section('content')
     <div class="container dark" >
-        <h1 class="heading-list">Cadastre um novo jogo</h1>
+        <header class="header">
+            <h1 class="heading-list">Cadastre um novo jogo</h1>
+            <a href="{{route('games_index')}}" class="btn btn-success">Voltar</a>
+          </header>
         <hr>
         <form action="{{route('games_store')}}" method="POST" >
             @csrf
