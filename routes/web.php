@@ -13,12 +13,12 @@ use App\Http\Controllers\GamesController;
 |
 */
 
-Route::get('/games',[GamesController::class, 'index']);
+Route::prefix('games')->group(function(){
+    Route::get('/',[GamesController::class,'index'])->name('games_index');
+    Route::get('/create',[GamesController::class,'create'])->name('games_create');
+    Route::post('/',[GamesController::class,'store'])->name('games_store');
+});
 
-
-Route::get('/home', function () {
-    return view('games');
-})->name('jogos');
 
 Route::fallback(function(){
     return "Erro 404 página não encontrada <a href=\"/\">Retornar</a>";

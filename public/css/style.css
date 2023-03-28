@@ -1,0 +1,22 @@
+*{
+    margin: 0px;
+}
+.dark{
+    background-color: #191a1b;
+   
+}
+h1.heading-list{
+    color: white;
+    background-color: #191a1b;
+    margin: 0;
+    
+    padding: 20px;
+}
+.container{
+   
+}
+
+.table{
+    margin-top: 0px;
+    position: sticky;
+}

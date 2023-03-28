@@ -3,7 +3,7 @@
 @section('title','Listagem')
 
 @section('content')
-    <h1>Listagem dos jogos</h1>
+    <h1 class="heading-list">Listagem dos jogos</h1>
     <table class="table table-dark table-striped">
         <thead>
             <tr>

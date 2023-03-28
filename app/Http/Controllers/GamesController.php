@@ -16,4 +16,13 @@ class GamesController extends Controller
             'jogos'=>$jogos,
         ]);
     }
+
+    public function create(){
+        return view('games.create');
+    }
+    public function store(Request $request){
+        Game::create($request->all());
+
+        return redirect()->route('games_index');
+    }
 }
