@@ -33,7 +33,7 @@
                 <td scope="row">{{$jogo->category}}</td>
                 <td scope="row">{{$jogo->creation_year}}</td>
                 <td scope="row">{{$jogo->value}}</td>
-                <td scope="row"><a href="#" class="btn btn-info">Editar</a><a href="#" class="btn btn-danger">Deletar</a></td>
+                <td scope="row"><a href="{{route('games_edit',['id'=>$jogo->id])}}" class="btn btn-info"><ion-icon name="create-outline"></ion-icon> Editar</a><a href="#" class="btn btn-danger"><ion-icon name="trash-outline"></ion-icon> Deletar</a></td>
               </tr>
               @endforeach
             </tbody>
